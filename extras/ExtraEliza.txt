@@ -1,0 +1,51 @@
+
+###### Chat com Eliza:
+
+Hello. I am ELIZA. How can I help you?
+> Hello. Can you give me some Prolog tips?
+
+How do you do. Please state your problem.
+> I need to understand prolog
+
+What would it mean to you if you got to understand prolog?
+> It means a lot to me, because I need it to understand the logical paradigm.
+
+Why do you want it to understand the logical paradigm?
+> Sorry, I don't understand what are you asking.
+
+Please do not apologize.
+> Ok, sorry.
+
+Apologies are not necessary.
+> Good bye.
+
+I am not sure I understand you fully
+
+####################################################################################
+
+
+PARTES DO CÓDIGO QUE ENTENDI: 
+
+## PARTE 1: ##
+
+rules([[sorry,0],[
+	[1,[_],0,
+		[please,do,not,apologize,.],
+		[apologies,are,not,necessary,.],
+		[what,feelings,do,you,have,when,you,apologize,?],
+		['I',have,told,you,that,apologies,are,not,required,.]]]]).
+
+Este código define uma regra, que retorna ao usuário um conjunto de respostas 
+para quando ele digita a palavra "sorry". Na primeira vez em que o usuário digita  "sorry", 
+Eliza retorna "Please do not apologize", na segunda "Apologies are not necessary" e assim por diante.
+
+
+## PARTE 2: ##
+
+lower_case(X,Y) :-
+	X >= 65,
+	X =< 90,
+	Y is X + 32, !.
+
+Predicado que troca uma letra maiúscula, pela sua referente minúscula. 
+Por exemplo, 'A'(65) irá receber 'a'(97), que em ascii se refere ao número que representa a letra A(65) + 32.
