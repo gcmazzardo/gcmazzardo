@@ -1,0 +1,38 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0303 
+header_name {.h} 
+code_name {.cxx}
+class UserInterface {open
+} {
+  Function {UserInterface()} {open
+  } {
+    Fl_Window w {open
+      xywh {684 101 535 520} type Double visible
+    } {
+      Fl_Box img {
+        image {logo.png} xywh {220 129 35 16}
+      }
+      Fl_Input numParticipantes {
+        label {Participantes:}
+        xywh {195 287 140 23} type Int
+      }
+      Fl_Box Resultado {
+        protected xywh {100 347 341 73} labelsize 42
+      }
+      Fl_Button btResetar {
+        label Resetar
+        protected xywh {348 284 95 30}
+      }
+      Fl_Button btSortear {
+        label Sortear
+        protected xywh {99 425 345 65}
+      }
+      Fl_Text_Display DisplayResultado {
+        xywh {98 345 345 75}
+      }
+      Fl_Text_Display DisplayGanhador {selected
+        xywh {85 345 145 0}
+      }
+    }
+  }
+} 
