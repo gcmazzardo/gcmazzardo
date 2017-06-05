@@ -15,12 +15,11 @@ public:
   Fl_Double_Window *w;
   Fl_Box *img;
   Fl_Int_Input *numParticipantes;
+  Fl_Text_Display *DisplayResultado;
+  Fl_Text_Display *DisplayGanhador;
 protected:
   Fl_Box *Resultado;
   Fl_Button *btResetar;
   Fl_Button *btSortear;
-public:
-  Fl_Text_Display *DisplayResultado;
-  Fl_Text_Display *DisplayGanhador;
 };
 #endif
